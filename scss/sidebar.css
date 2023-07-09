@@ -563,15 +563,36 @@ app marcup (after 920px)
     padding-left: 15px;
     padding-right: 15px;
   }
-  /* ----- preloader ----- */
-  .art-preloader {
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
-  }
   /* ----- scroll frame ----- */
   .art-scroll-frame {
-    height: 100vh;
+    width: 100%;
+    height: calc(100vh - 30px);
+  }
+  .scrollbar-track {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+  /* ------------------------------
+
+  app marcup
+
+  ------------------------------ */
+  /* ----- top background ----- */
+  .art-top-bg {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background-position: center;
+    height: 400px;
+    background-size: cover;
+  }
+  .art-top-bg .art-top-bg-overlay {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(180deg, rgba(30, 30, 40, 0.93) 0%, rgba(30, 30, 40, 0.96) 70%, rgba(30, 30, 40, 0.99) 80%, rgb(30, 30, 40) 100%);
   }
   .art-app {
     padding: 0;
